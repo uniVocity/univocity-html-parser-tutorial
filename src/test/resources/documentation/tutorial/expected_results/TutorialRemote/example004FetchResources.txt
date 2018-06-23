@@ -1,0 +1,14 @@
+[location_22008_page_0001.html] skip download from http://localhost:8086/EOJ22396.html into ../cache/EOJ22396.html
+[location_22008_page_0001.html] skip download from http://localhost:8086/EFB3925.html into ../cache/EFB3925.html
+[location_22008_page_0001.html] skip download from http://localhost:8086/results_0002.html into ../cache/results_0002.html
+[EOJ22396.html] download from http://localhost:8086/Images/Icons/bedroom.svg into ../cache/Images/Icons/bedroom.svg
+[EOJ22396.html] download from http://localhost:8086/Images/Icons/bathroom.svg into ../cache/Images/Icons/bathroom.svg
+[EOJ22396.html] skip download from http://localhost:8086/results_0001.html into ../cache/results_0001.html
+[EFB3925.html] skip download from http://localhost:8086/results_0001.html into ../cache/results_0001.html
+[location_22008_page_0002.html] skip download from http://localhost:8086/EMC26962.html into ../cache/EMC26962.html
+[location_22008_page_0002.html] skip download from http://localhost:8086/ECT37343.html into ../cache/ECT37343.html
+[location_22008_page_0002.html] skip download from http://localhost:8086/results_0001.html into ../cache/results_0001.html
+[EMC26962.html] download from http://localhost:8086/Images/Icons/bedroom.svg into ../cache/Images/Icons/bedroom.svg
+[EMC26962.html] download from http://localhost:8086/Images/Icons/bathroom.svg into ../cache/Images/Icons/bathroom.svg
+[EMC26962.html] skip download from http://localhost:8086/results_0002.html into ../cache/results_0002.html
+[ECT37343.html] skip download from http://localhost:8086/results_0002.html into ../cache/results_0002.html

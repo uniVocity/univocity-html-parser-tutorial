@@ -1,0 +1,24 @@
+* Petrol prices on MON
+	Caltex | Reviewed by: Bob(001)
+		Price of UNLEADED: $1.32
+		Price of DIESEL: $1.36
+	Shell | Reviewed by: Bob(001)
+		Price of UNLEADED: $1.10
+		Price of DIESEL: $1.55
+----------------------
+* Petrol prices on TUE
+	Shell | Reviewed by: Adam(007)
+		Price of UNLEADED: $1.40
+		Price of DIESEL: $1.33
+	Texaco | Reviewed by: Adam(007)
+		Price of UNLEADED: $1.23
+		Price of DIESEL: $1.90
+----------------------
+* Petrol prices on WED
+	BP | Reviewed by: Jade(099)
+		Price of UNLEADED: $1.69
+		Price of DIESEL: $1.01
+	Texaco | Reviewed by: Jade(099)
+		Price of UNLEADED: $1.52
+		Price of DIESEL: $1.40
+----------------------

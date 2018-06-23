@@ -1,0 +1,36 @@
+[ dayOfWeek ]
+day__
+MON  
+TUE  
+WED  
+
+[ fuel ]
+fuel_type__price__day__petrol_station_name__reviewer_id__
+UL         $1.32  MON  Caltex               001          
+D          $1.36  MON  Caltex               001          
+UL         $1.40  TUE  Shell                007          
+D          $1.33  TUE  Shell                007          
+UL         $1.52  WED  Texaco               099          
+D          $1.40  WED  Texaco               099          
+UL         $1.10  MON  Shell                001          
+D          $1.55  MON  Shell                001          
+UL         $1.23  TUE  Texaco               007          
+D          $1.90  TUE  Texaco               007          
+UL         $1.69  WED  BP                   099          
+D          $1.01  WED  BP                   099          
+
+[ petrolStation ]
+petrol_station_name__
+Caltex               
+Shell                
+Texaco               
+Shell                
+Texaco               
+BP                   
+
+[ reviewer ]
+reviewer_name__reviewer_id__
+Bob            001          
+Adam           007          
+Jade           099          
+

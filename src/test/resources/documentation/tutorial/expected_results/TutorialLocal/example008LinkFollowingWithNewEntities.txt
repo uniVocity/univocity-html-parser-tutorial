@@ -1,0 +1,13 @@
+[Jon Smith, ./profiles/1123.html, jsmith, 25, Adelaide, South Australia, 25/4/2008, 2]
+  * [Somewhere, in the world, Personal]
+  * [Somewhere else, in the world, Mailing]
+
+[Maggie Jones, ./profiles/3321.html, mag, 52, Austin, Texas, 16/2/2010, 0]
+
+[James Miller, ./profiles/8821.html, jmiller, 31, Detroit, Michigan, 10/3/2007, 2]
+  * [201 Fake St, Zambia 12311, Business]
+  * [201 Fake St, Cayman Islands 12311, Business]
+
+[Sofia Fischer, ./profiles/2315.html, fish, 19, Berlin, Germany, 1/7/2015, 1]
+  * [Radelaide, Straya, Mailing]
+

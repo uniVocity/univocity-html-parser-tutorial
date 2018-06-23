@@ -1,0 +1,54 @@
+body {
+	font-family: sans-serif;
+}
+
+a:link, a:visited, a:hover {
+	text-decoration: none;
+}
+
+#resultsContainer {
+	margin-left: 10px;
+	margin-top: 20px;
+	width: 700px;
+	height: 300px;
+}
+
+#resultsContainer div {
+	margin-top: 10px;
+	padding:10px;
+	border-radius: 5px;
+}
+
+.result {
+	background: #CCC;
+}
+
+.advert {
+	background: #C6C6FF;
+	box-shadow: 5px 5px 6px black;
+}
+
+.block {
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+
+#pageControl{
+	width: 700px;
+	height: 30px;
+	margin-top: 20px;
+	margin-left: 10px;
+	background-color: #EEE;
+	border-radius: 5px;
+}
+
+#prevPage {
+	margin: 5px;
+	float: left;
+}
+
+#nextPage {
+	margin: 5px;
+	float: right;
+}

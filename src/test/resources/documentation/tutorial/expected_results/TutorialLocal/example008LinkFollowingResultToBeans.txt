@@ -1,0 +1,17 @@
+Jon Smith (jsmith), age 25, location=Adelaide, South Australia - Created on 2008-Apr-25
+2 addresses
+ * PERSONAL: Somewhere, in the world
+ * MAILING: Somewhere else, in the world
+
+Maggie Jones (mag), age 52, location=Austin, Texas - Created on 2010-Feb-16
+0 addresses
+
+James Miller (jmiller), age 31, location=Detroit, Michigan - Created on 2007-Mar-10
+2 addresses
+ * BUSINESS: 201 Fake St, Zambia 12311
+ * BUSINESS: 201 Fake St, Cayman Islands 12311
+
+Sofia Fischer (fish), age 19, location=Berlin, Germany - Created on 2015-Jul-01
+1 addresses
+ * MAILING: Radelaide, Straya
+

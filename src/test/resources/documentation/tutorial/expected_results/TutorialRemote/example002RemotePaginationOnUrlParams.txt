@@ -1,0 +1,5 @@
+Next page: http://localhost:8086/sch/i.html?_from=R40&_sacat=0&_nkw=memory+stick&_pgn=2&_skc=50&rt=nc
+Next page: http://localhost:8086/sch/i.html?_from=R40&_sacat=0&_nkw=memory+stick&_pgn=3&_skc=50&rt=nc
+Next page: http://localhost:8086/sch/i.html?_from=R40&_sacat=0&_nkw=memory+stick&_pgn=4&_skc=50&rt=nc
+Next page: http://localhost:8086/sch/i.html?_from=R40&_sacat=0&_nkw=memory+stick&_pgn=5&_skc=50&rt=nc
+Request not modified, pagination will stop: http://localhost:8086/sch/i.html?_from=R40&_sacat=0&_nkw=memory+stick&_pgn=5&_skc=50&rt=nc

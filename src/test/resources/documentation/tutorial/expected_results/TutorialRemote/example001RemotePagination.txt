@@ -1,0 +1,6 @@
+Going to page 2: http://localhost:8086/s/ref=sr_pg_2/162-3301318-6508331?rh=i%3Aaps%2Ck%3Amouse&page=2&keywords=mouse&ie=UTF8&qid=1478752936&spIA=B00BIFNTMC,B00Y20UI1K,B01B1QBK78,B01MA15TCE
+Headers: {Accept-Encoding=gzip, User-Agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:49.0) Gecko/20100101 Firefox/49.0, Accept-Language=en-US,en;q=0.5}
+
+Going to page 3: http://localhost:8086/s/ref=sr_pg_3?rh=i%3Aaps%2Ck%3Amouse&page=3&keywords=mouse&ie=UTF8&qid=1478752938&spIA=B01M22S0SE,B01M6XU1M5,B00E290JRE,B01IMYD5JI,B00BIFNTMC,B00Y20UI1K,B01B1QBK78,B01MA15TCE
+Headers: {Accept-Encoding=gzip, User-Agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:49.0) Gecko/20100101 Firefox/49.0, Accept-Language=en-US,en;q=0.5}
+

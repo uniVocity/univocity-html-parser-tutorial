@@ -1,0 +1,12 @@
+[ address ]
+company_id__type______________street1___________________street2_____city______state____________country____zip___
+123         Business address  MARKET PLAZA - AIR TOWER  25th floor  Sydney    New South Wales  Australia  2222  
+123         Mailing address   1 Some street                         Sydney    New South Wales  Australia  2220  
+456         Business address                                                                                    
+456         Mailing address   2 George St                           Adelaide  South Australia  Australia  5000  
+
+[ company ]
+company_id__name_______________
+123         My Corporation     
+456         Other Corporation  
+

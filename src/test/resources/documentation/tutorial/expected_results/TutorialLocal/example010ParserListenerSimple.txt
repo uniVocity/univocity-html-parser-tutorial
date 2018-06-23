@@ -1,0 +1,2 @@
+Values *not* captured by the parser:
+3321.html: <td class="value">26/6/2012</td>

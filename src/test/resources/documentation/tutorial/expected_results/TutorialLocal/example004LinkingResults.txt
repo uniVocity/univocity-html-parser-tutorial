@@ -1,0 +1,7 @@
+Addresses of company: My Corporation (123)
+123  B  MARKET PLAZA - AIR TOWER  25th floor  Sydney  New South Wales  Australia  2222  
+123  M  1 Some street                         Sydney  New South Wales  Australia  2220  
+
+Addresses of company: Other Corporation (456)
+456  M  2 George St    Adelaide  South Australia  Australia  5000  
+

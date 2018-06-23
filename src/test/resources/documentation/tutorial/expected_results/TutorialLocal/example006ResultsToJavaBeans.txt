@@ -1,0 +1,5 @@
+Company 123: My Corporation
+ * BUSINESS: market plaza - air tower 25th floor, Sydney - New South Wales, AUSTRALIA 2222
+ * MAILING: 1 some street, Sydney - New South Wales, AUSTRALIA 2220
+Company 456: Other Corporation
+ * MAILING: 2 george st, Adelaide - South Australia, AUSTRALIA 5000

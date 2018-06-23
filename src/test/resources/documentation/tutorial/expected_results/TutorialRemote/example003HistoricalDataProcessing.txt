@@ -1,0 +1,5 @@
+propertyDetailsLink___________________________________id________address______________________price_______bedrooms__bathrooms__landSize__propertyType__
+/Property/307928/EOJ22396/Fountains-Estate            EOJ22396  Fountains Estate             $1,460,000  2         2          440 sqm   House         
+/Property/307712/EFB3925/St-Francis-On-Sea-Phase-I-I  EFB3925   St Francis On Sea Phase I I  $880,000                         739 sqm   Land          
+/Property/307743/EMC26962/West-Bank                   EMC26962  West Bank                    $890,000    3         2          607 sqm   House         
+/Property/307927/ECT37343/Cambridge-West              ECT37343  Cambridge West               $450,000                         536 sqm   Land          

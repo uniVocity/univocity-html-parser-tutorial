@@ -1,0 +1,13 @@
+Caltex -> UNLEADED = $1.32 | Reviewed by: Bob (001)
+Caltex -> DIESEL = $1.36 | Reviewed by: Bob (001)
+Shell -> UNLEADED = $1.40 | Reviewed by: Adam (007)
+Shell -> DIESEL = $1.33 | Reviewed by: Adam (007)
+Texaco -> UNLEADED = $1.52 | Reviewed by: Jade (099)
+Texaco -> DIESEL = $1.40 | Reviewed by: Jade (099)
+Shell -> UNLEADED = $1.10 | Reviewed by: Bob (001)
+Shell -> DIESEL = $1.55 | Reviewed by: Bob (001)
+Texaco -> UNLEADED = $1.23 | Reviewed by: Adam (007)
+Texaco -> DIESEL = $1.90 | Reviewed by: Adam (007)
+BP -> UNLEADED = $1.69 | Reviewed by: Jade (099)
+BP -> DIESEL = $1.01 | Reviewed by: Jade (099)
+----------------------

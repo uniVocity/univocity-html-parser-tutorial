@@ -1,0 +1,20 @@
+Values *not* captured by the parser:
+3321.html: <td class="value">26/6/2012</td>
+
+Elements matched by the parser:
+1123.html - username: <td class="value">jsmith</td>
+1123.html - age: <td class="value">25</td>
+1123.html - location: <td class="value">Adelaide, South Australia</td>
+1123.html - created: <td class="value">25/4/2008</td>
+3321.html - username: <td class="value">mag</td>
+3321.html - age: <td class="value">52</td>
+3321.html - location: <td class="value">Austin, Texas</td>
+3321.html - created: <td class="value">16/2/2010</td>
+8821.html - username: <td class="value">jmiller</td>
+8821.html - age: <td class="value">31</td>
+8821.html - location: <td class="value">Detroit, Michigan</td>
+8821.html - created: <td class="value">10/3/2007</td>
+2315.html - username: <td class="value">fish</td>
+2315.html - age: <td class="value">19</td>
+2315.html - location: <td class="value">Berlin, Germany</td>
+2315.html - created: <td class="value">1/7/2015</td>
