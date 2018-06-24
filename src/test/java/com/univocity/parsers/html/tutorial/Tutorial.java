@@ -147,7 +147,7 @@ public abstract class Tutorial extends OutputTester{
 		settings.setUseDefaultPaddingForHeaders(true);
 		settings.getFormat().setPadding('_');
 		settings.setEmptyValue("\"\"");
-		settings.setNullValue("null");
+		settings.setNullValue("");
 		FixedWidthWriter writer = new FixedWidthWriter(settings);
 
 		return writer;
