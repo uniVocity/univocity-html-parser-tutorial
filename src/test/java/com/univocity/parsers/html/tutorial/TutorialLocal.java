@@ -244,7 +244,7 @@ public class TutorialLocal extends Tutorial {
 		// follows the "Mailing address" heading is closed.
 		Group mailingAddressGroup = address.newGroup()
 				.startAt("tr").withExactTextMatchCase("Mailing address")
-				.endAtClosing("tr").precededByText("tr").withExactTextMatchCase("Mailing address");
+				.endAtClosing("tr").precededBy("tr").withExactTextMatchCase("Mailing address");
 
 		//Any rows produced from within this group will have field "type" set to "M" (for mailing addresses)
 		mailingAddressGroup.addField("type", "M");
