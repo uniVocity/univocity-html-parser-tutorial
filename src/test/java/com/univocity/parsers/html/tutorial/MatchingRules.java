@@ -22,7 +22,7 @@ public class MatchingRules extends Tutorial {
 		// Parse an input HTML into a tree structure.
 		HtmlElement root = HtmlParser.parseTree(input);
 		List<HtmlElement> expectedElements = root.query()
-				.match("span").match("b")
+				.match("tr").match("span").match("b")
 				.getElements();
 
 		for (HtmlElement e : expectedElements) {
