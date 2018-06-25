@@ -20,15 +20,19 @@ public class Gotchas extends Tutorial {
 		HtmlEntityList entityList = new HtmlEntityList();
 
 		//##CODE_START
-		HtmlEntitySettings entity = entityList.configureEntity("company");
+		HtmlEntitySettings company = entityList.configureEntity("company");
 
-		entity.addField("id")
-				.match("span").withText("company no:")
-				.match("span").getText(); // match any <span> after finding a <span> with text "company no"
+		// creates a field "id" for company numbers
+		company.addField("id")
+				.match("span").withText("company no:") // match any <span> with text "company no"
+				.match("span") /*GOTCHA!*/
+				.getText(); // match any <span> after finding a <span> with text "company no"
 
-		entity.addField("name")
-				.match("span").withText("Legal name:")
-				.match("b").getText(); // match any <b> after finding a <span> with text "company no"
+		// creates a field "name" for company names
+		company.addField("name")
+				.match("span").withText("Legal name:") // match any <span> with text "company no"
+				.match("b") /*GOTCHA!*/
+				.getText(); // match any <b> after finding a <span> with text "company no"
 		//##CODE_END
 
 		HtmlParser parser = new HtmlParser(entityList);
@@ -52,12 +56,14 @@ public class Gotchas extends Tutorial {
 		// creates a field "id" for company numbers
 		company.addField("id")
 				.match("span").withText("company no:") // match any <span> with text "company no"
-				.matchNext("span").getText(); //match only the next <span> after finding a <span> with text "company no"
+				.matchNext("span")
+				.getText(); //match only the next <span> after finding a <span> with text "company no"
 
 		// creates a field "name" for company names
 		company.addField("name")
 				.match("span").withText("Legal name:") // match any <span> with text "company no"
-				.matchNext("b").getText(); //match only the next <b> after finding a <span> with text "legal name"
+				.matchNext("b")
+				.getText(); //match only the next <b> after finding a <span> with text "legal name"
 
 		// create a parser instance
 		HtmlParser parser = new HtmlParser(entityList);
@@ -185,7 +191,7 @@ public class Gotchas extends Tutorial {
 		// You can run query the nodes of the tree using the matching rule API used when defining fields of an entity.
 		List<HtmlElement> unexpectedElements = root.query()
 				.match("span").withText("company no:")
-				.match("span")
+				.match("span") /*GOTCHA!*/
 				.getElements();
 
 		// Which is useful to identify any issues in your matching rules
@@ -206,7 +212,8 @@ public class Gotchas extends Tutorial {
 		//##CODE_START
 		List<HtmlElement> expectedElements = root.query()
 				.match("span").withText("company no:")
-				.matchNext("span").getElements();
+				.matchNext("span")
+				.getElements();
 
 		for (HtmlElement e : expectedElements) {
 			println(e);
