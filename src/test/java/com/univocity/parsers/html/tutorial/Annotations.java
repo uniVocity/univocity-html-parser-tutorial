@@ -32,7 +32,7 @@ public class Annotations extends Tutorial {
 		petrolStation.addField("petrol_station_name") //any <td> somewhere after a <th> with text "Retailer"
 				.match("td").precededBy("th").withText("Retailer").getText();
 
-		// collects all reviewer names their IDs
+		// collects all reviewer names and their IDs
 		HtmlEntitySettings reviewer = htmlEntityList.configureEntity("reviewer");
 		reviewer.addField("reviewer_name") //first <span> inside a <td> of a <tfoot>
 				.match("tfoot").match("td").matchFirst("span").getText();
@@ -48,12 +48,8 @@ public class Annotations extends Tutorial {
 		fuelPricePath.addField("price")
 				.matchLast("td").getText(); // The fuel price is in the the last <td> of the <tr> matched by the partial path.
 
-		// Now we add fields to our "fuel" entity - their values exist in other entities and we will use them to join their records
-		// Note that the following fields are "persistent" because their rules are based on each <table> with prices - there are 6 tables so
-		// the matching rules run to collect a value 6 times for each field.
-		//
-		// The fields added earlier ("fuel_type" and "price") come from the rows inside each one of these same 6 tables.
-		// As each table has 2 rows the matching rules for "fuel_type" and "price" capture 12 values for each field.
+		// Now we add fields to our "fuel" that already exist in the other entities created above.
+		// We will use these fields to join records of each entity ('dayOfWeek', 'petrolStation', 'reviewer' and 'fuel')
 
 		fuel.addPersistentField("day") // captures the day of week of each fuel price listed.
 				//matches a <table> contained by an outer <table>. Then goes up to the first <th> that is above the inner <table> and grabs its text.
@@ -70,7 +66,7 @@ public class Annotations extends Tutorial {
 				// From that <td>, gets the last <span> then collect the text between '(' and ')'
 				.matchLast("span").getText().transform(s -> s.substring(1, s.length() - 1));
 
-		//That's it, let's parse the HTML and get the results.
+		//That's it, let's parse the HTML and get the results to see what data we get.
 		FileProvider inputFile = new FileProvider("documentation/tutorial/html/annotations/linkedEntityTest.html");
 
 		Results<HtmlParserResult> result = new HtmlParser(htmlEntityList).parse(inputFile);
@@ -138,7 +134,6 @@ public class Annotations extends Tutorial {
 			print(petrolStation.name + " -> " + petrolStation.price);
 			println(" | Reviewed by: " + petrolStation.reviewer.name + " (" + petrolStation.reviewer.id + ")");
 		}
-		println("----------------------");
 		//##CODE_END
 		printAndValidate();
 	}

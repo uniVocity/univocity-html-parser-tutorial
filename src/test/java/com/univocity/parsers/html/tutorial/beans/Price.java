@@ -19,7 +19,7 @@ public class Price {
 	public FuelType fuelType;
 
 	@Replace(expression = "\\$", replacement = "")
-	@Parsed(field = "price")
+	@Parsed
 	public BigDecimal price;
 
 	@Override

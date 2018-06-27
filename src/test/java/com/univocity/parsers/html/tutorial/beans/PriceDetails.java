@@ -13,13 +13,35 @@ import com.univocity.parsers.annotations.*;
  */
 public class PriceDetails {
 
-	@Parsed(field = "petrol_station_name")
-	public String name;
+	// Maps records with headers [fuel_type, price, petrol_station_name]
+	// each having 0 or 1 linked records with headers [reviewer_id, reviewer_name]
+	// These headers are defined in the @Parsed annotations of classes `Reviewer` and `Price`
 
-	@Linked
+	/**
+	 * For each record with data for a `PriceDetails` object, we expect to obtain 0 or 1
+	 * linked records from an entity named "reviewer". The linked record will be converted
+	 * to an instance the `Reviewer` class
+	 *
+	 * As the attribute name matches the entity name, 'entity = "reviewer"' could have been omitted
+	 */
+	@Linked(entity = "reviewer")
 	public Reviewer reviewer;
 
+	/**
+	 * The nested `Price` attribute has fields "fuel_type" and "price".
+	 * Each record with data for a `PriceDetails` object is expected to have
+	 * fields named "fuel_type" and "price", which will be used to populate the
+	 * attributes of an instance of `Price`
+	 */
 	@Nested
 	public Price price;
+
+	/**
+	 * Each record with data for a `PriceDetails` object is expected to also have
+	 * a field named "petrol_station_name", whose value will be used to set this
+	 * "name" attribute
+	 */
+	@Parsed(field = "petrol_station_name")
+	public String name;
 
 }

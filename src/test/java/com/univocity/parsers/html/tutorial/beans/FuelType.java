@@ -14,14 +14,14 @@ public enum FuelType {
 	UNLEADED("UL"),
 	DIESEL("D");
 
-	public final String acronym;
+	public final String code;
 
-	FuelType(String acronym) {
-		this.acronym = acronym;
+	FuelType(String code) {
+		this.code = code;
 	}
 
 	@Override
 	public String toString() {
-		return acronym;
+		return code;
 	}
 }

@@ -10,4 +10,3 @@ Texaco -> UNLEADED = $1.23 | Reviewed by: Adam (007)
 Texaco -> DIESEL = $1.90 | Reviewed by: Adam (007)
 BP -> UNLEADED = $1.69 | Reviewed by: Jade (099)
 BP -> DIESEL = $1.01 | Reviewed by: Jade (099)
-----------------------
