@@ -27,6 +27,8 @@ public class PetrolStation implements Comparable<PetrolStation> {
 		return name + " - Reviewer: " + reviewer + "";
 	}
 
+	// we're going to use PetrolStation as the keys of a TreeMap, so we implemented
+	// the `Comparable` interface
 	@Override
 	public int compareTo(PetrolStation o) {
 		return this.toString().compareTo(o.toString());
