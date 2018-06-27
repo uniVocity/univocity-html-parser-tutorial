@@ -299,7 +299,7 @@ public class TutorialRemote extends Tutorial {
 
 	}
 
-	@Test
+	@Test(enabled = false) //disabled by default as this one goes to the internet.
 	public void example005SavePageLikeABrowser() {
 		//##CODE_START
 		UrlReaderProvider url = new UrlReaderProvider("http://www.univocity.com");
@@ -324,6 +324,6 @@ public class TutorialRemote extends Tutorial {
 		}
 
 		//##CODE_END
-		printAndValidate();
+		printAndDontValidate();
 	}
 }
