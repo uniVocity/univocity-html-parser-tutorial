@@ -301,8 +301,8 @@ public class TutorialLocal extends Tutorial {
 
 	private void getValueFromLabel(HtmlLinkFollower follower, String fieldName, String key) {
 		follower.addField(fieldName)
-				.match("td").classes("value")
-				.precededImmediatelyBy("td").classes("label").withText(key)
+				.match("td").classes("value") //gets the text of a table cell with class "value"
+				.precededImmediatelyBy("td").classes("label").withText(key) // if it is preceded by a cell with class "label" and a given text
 				.getOwnText();
 	}
 
