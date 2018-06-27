@@ -176,9 +176,9 @@ public class TutorialRemote extends Tutorial {
 		HtmlEntityList entityList = configureRealEstatePagination();
 
 		//##CODE_START
-
+		String url = "http://localhost:8086/Property/Residential?search=&location={LOCATION_CODE}&proptype=&min=&max=&minbed=&maxbed=&formsearch=true&page=1";
 		// The search query lists all properties at a given location
-		UrlReaderProvider search = new UrlReaderProvider("http://localhost:8086/Property/Residential?search=&location={LOCATION_CODE}&proptype=&min=&max=&minbed=&maxbed=&formsearch=true&page=1");
+		UrlReaderProvider search = new UrlReaderProvider(url);
 
 		HtmlParser parser = new HtmlParser(entityList);
 
@@ -227,8 +227,9 @@ public class TutorialRemote extends Tutorial {
 		HtmlEntityList entityList = configureRealEstatePagination();
 		configureHouseDetailsParsing(entityList);
 
+		String url = "http://localhost:8086/Property/Residential?search=&location={LOCATION_CODE}&proptype=&min=&max=&minbed=&maxbed=&formsearch=true&page=1";
 		// The search query lists all properties at a given location
-		UrlReaderProvider search = new UrlReaderProvider("http://localhost:8086/Property/Residential?search=&location={LOCATION_CODE}&proptype=&min=&max=&minbed=&maxbed=&formsearch=true&page=1");
+		UrlReaderProvider search = new UrlReaderProvider(url);
 
 		HtmlParser parser = new HtmlParser(entityList);
 
@@ -279,8 +280,9 @@ public class TutorialRemote extends Tutorial {
 
 		configureHouseDetailsParsing(entityList);
 
+		String url = "http://localhost:8086/Property/Residential?search=&location={LOCATION_CODE}&proptype=&min=&max=&minbed=&maxbed=&formsearch=true&page=1";
 		// The search query lists all properties at a given location
-		UrlReaderProvider search = new UrlReaderProvider("http://localhost:8086/Property/Residential?search=&location={LOCATION_CODE}&proptype=&min=&max=&minbed=&maxbed=&formsearch=true&page=1");
+		UrlReaderProvider search = new UrlReaderProvider(url);
 
 		HtmlParser parser = new HtmlParser(entityList);
 
@@ -308,7 +310,7 @@ public class TutorialRemote extends Tutorial {
 		//configure fetch options as needed
 		FetchOptions fetchOptions = new FetchOptions();
 
-		// flatten directories (generates long file names, so subdirectories)
+		// flatten directories (generates long file names, no subdirectories)
 		fetchOptions.flattenDirectories(true);
 
 		// you can use the fetch output object to list all downloaded files
