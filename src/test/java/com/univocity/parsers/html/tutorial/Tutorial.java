@@ -10,11 +10,20 @@ import com.univocity.api.entity.html.*;
 import com.univocity.api.io.*;
 import com.univocity.parsers.common.*;
 import com.univocity.parsers.fixed.*;
+import com.univocity.parsers.html.*;
 import com.univocity.test.*;
 
 import java.util.*;
 
 public abstract class Tutorial extends OutputTester{
+
+	/**
+	 * Execute the main method to request a trial license.
+	 */
+	public static void main(String ... args){
+		Main.runLicenseManager();
+	}
+
 	protected Tutorial() {
 		super("documentation/tutorial/expected_results", "UTF-8");
 	}

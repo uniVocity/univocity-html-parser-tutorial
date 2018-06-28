@@ -86,6 +86,13 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
 
+	<repositories>
+		<repository>
+			<id>univocity-releases</id>
+			<url>http://artifacts.univocity.com/release</url>
+		</repository>
+	</repositories>
+
     <dependencies>
         <dependency>
 		    <groupId>com.univocity</groupId>
