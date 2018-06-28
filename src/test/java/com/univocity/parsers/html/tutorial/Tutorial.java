@@ -10,7 +10,6 @@ import com.univocity.api.entity.html.*;
 import com.univocity.api.io.*;
 import com.univocity.parsers.common.*;
 import com.univocity.parsers.fixed.*;
-import com.univocity.parsers.html.*;
 import com.univocity.test.*;
 
 import java.util.*;
@@ -21,7 +20,7 @@ public abstract class Tutorial extends OutputTester{
 	 * Execute the main method to request a trial license.
 	 */
 	public static void main(String ... args){
-		Main.runLicenseManager();
+		com.univocity.parsers.html.Main.runLicenseManager();
 	}
 
 	protected Tutorial() {
