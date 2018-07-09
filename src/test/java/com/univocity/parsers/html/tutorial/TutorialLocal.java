@@ -9,6 +9,7 @@ package com.univocity.parsers.html.tutorial;
 import com.univocity.api.entity.html.*;
 import com.univocity.api.entity.html.builders.*;
 import com.univocity.api.io.*;
+import com.univocity.api.net.*;
 import com.univocity.parsers.common.*;
 import com.univocity.parsers.html.tutorial.beans.*;
 import org.testng.annotations.*;
@@ -584,11 +585,79 @@ public class TutorialLocal extends Tutorial {
 		// context object the parser sends to the listener.
 		println("\nElements matched by the parser:");
 		List<String> matched = valueDetector.getMatchedElementReport();
-		for(String entry : matched){
+		for (String entry : matched) {
 			println(entry);
 		}
 
 		//##CODE_END
 		printAndValidate();
+	}
+
+	public static void main2(String... args) {
+		UrlReaderProvider url = new UrlReaderProvider("http://ratings.fide.com/card.phtml?event={EVENT}");
+		url.getRequest().setUrlParameter("EVENT", 2821109);
+
+		HtmlElement doc = HtmlParser.parseTree(url);
+
+		String rating = doc.query()
+				.match("small").withText("std.")
+				.match("br").getFollowingText()
+				.getValue();
+
+		System.out.println(rating);
+	}
+
+	public static void main(String... args) {
+		UrlReaderProvider url = new UrlReaderProvider("http://www.chess.org.il/Players/Player.aspx?Id={PLAYER_ID}");
+		url.getRequest().setUrlParameter("PLAYER_ID", 25022);
+
+		HtmlEntityList entities = new HtmlEntityList();
+		HtmlEntitySettings player = entities.configureEntity("player");
+		player.addField("id").match("b").withExactText("מספר שחקן").getFollowingText().transform(s -> s.replaceAll(": ", ""));
+		player.addField("name").match("h1").followedImmediatelyBy("b").withExactText("מספר שחקן").getText();
+		player.addField("date_of_birth").match("b").withExactText("תאריך לידה:").getFollowingText();
+		player.addField("fide_id").matchFirst("a").attribute("href", "http://ratings.fide.com/card.phtml?event=*").getText();
+
+		HtmlLinkFollower playerCard = player.addField("fide_card_url").matchFirst("a").attribute("href", "http://ratings.fide.com/card.phtml?event=*").getAttribute("href").followLink();
+		playerCard.addField("rating_std").match("small").withText("std.").match("br").getFollowingText();
+		playerCard.addField("rating_rapid").match("small").withExactText("rapid").match("br").getFollowingText();
+		playerCard.addField("rating_blitz").match("small").withExactText("blitz").match("br").getFollowingText();
+		playerCard.setNesting(Nesting.REPLACE_JOIN);
+
+		HtmlEntitySettings ratings = playerCard.addEntity("ratings");
+		configureRatingsBetween(ratings, "World Rank", "National Rank ISR", "world");
+		configureRatingsBetween(ratings, "National Rank ISR", "Continent Rank Europe", "country");
+		configureRatingsBetween(ratings, "Continent Rank Europe", "Rating Chart", "continent");
+
+		Results<HtmlParserResult> results = new HtmlParser(entities).parse(url);
+		HtmlParserResult playerData = results.get("player");
+		String[] playerFields = playerData.getHeaders();
+
+		for(HtmlRecord playerRecord : playerData.iterateRecords()){
+			for(int i = 0; i < playerFields.length; i++){
+				System.out.print(playerFields[i] + ": " + playerRecord.getString(playerFields[i]) +"; ");
+			}
+			System.out.println();
+
+			HtmlParserResult ratingData = playerRecord.getLinkedEntityData().get("ratings");
+			for(HtmlRecord ratingRecord : ratingData.iterateRecords()){
+				System.out.print(" * " + ratingRecord.getString("rank_type") + ": ");
+				System.out.println(ratingRecord.fillFieldMap(new LinkedHashMap<>(), "all_players", "active_players", "female", "u16", "female_u16"));
+			}
+		}
+	}
+
+	private static void configureRatingsBetween(HtmlEntitySettings ratings, String startingHeader, String endingHeader, String rankType) {
+		Group group = ratings.newGroup()
+				.startAt("table").match("b").withExactText(startingHeader)
+				.endAt("b").withExactText(endingHeader);
+
+		group.addField("rank_type", rankType);
+
+		group.addField("all_players").match("tr").withText("World (all", "National (all", "Rank (all").match("td", 2).getText();
+		group.addField("active_players").match("tr").followedImmediatelyBy("tr").withText("Female (active players):").match("td", 2).getText();
+		group.addField("female").match("tr").withText("Female (active players):").match("td", 2).getText();
+		group.addField("u16").match("tr").withText("U-16 Rank (active players):").match("td", 2).getText();
+		group.addField("female_u16").match("tr").withText("Female U-16 Rank (active players):").match("td", 2).getText();
 	}
 }
