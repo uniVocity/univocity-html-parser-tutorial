@@ -1,7 +1,7 @@
 title_____________________________________________________________________link______________________________________________________________________________________
-GitHub - univocity/univocity-parsers                                      https://github.com/univocity/univocity-parsers
+GitHub - univocity/univocity-parsers                                      https://github.com/univocity/univocity-parsers                                            
 Univocity of being - Wikipedia                                            https://en.wikipedia.org/wiki/Univocity_of_being                                          
 Univocity | Definition of Univocity by Merriam-Webster                    https://www.merriam-webster.com/dictionary/univocity                                      
-univocity - ETL, data integration and data synchronization for Java       https://www.univocity.com/
-The best & fastest CSV parser for Java. With TSV & Fixed ... - univocity  https://www.univocity.com/pages/about-parsers
+univocity - ETL, data integration and data synchronization for Java       https://www.univocity.com/                                                                
+The best & fastest CSV parser for Java. With TSV & Fixed ... - univocity  https://www.univocity.com/pages/about-parsers                                             
 CsvParserSettings (univocity-parsers 1.3.0 API)                           http://docs.univocity.com/parsers/1.3.0/com/univocity/parsers/csv/CsvParserSettings.html  
