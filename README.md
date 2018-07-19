@@ -3,7 +3,7 @@ univocity-html-parser
 
 This repository contains the source code and input files used to write the
 official [tutorials](http://docs.univocity.com/tutorials/parsers/html/Tutorial.html)
-of the [univocity-html-parser](https://github.com/uniVocity/univocity-html-parser-api) 
+of the [univocity-html-parser](https://github.com/univocity/univocity-html-parser-api) 
 
 This is the result of 5 years of research and development to make working with HTML
 as effortless as possible.
