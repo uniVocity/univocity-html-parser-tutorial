@@ -9,7 +9,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.univocity</groupId>
 	<artifactId>univocity-html-parser-tutorial</artifactId>
-	<version>2.1.0</version>
+	<version>2.1.1</version>
 	<name>univocity-html-parser-tutorial</name>
 	<description>Univocity HTML Parser Tutorial</description>
 
@@ -97,7 +97,7 @@
         <dependency>
 		    <groupId>com.univocity</groupId>
 		    <artifactId>univocity-html-parser</artifactId>
-		    <version>2.1.0</version>
+		    <version>2.1.1</version>
 	    </dependency>
         <dependency>
             <groupId>org.testng</groupId>
@@ -117,5 +117,5 @@
             <version>1.58</version>
             <scope>test</scope>
         </dependency>
-    </dependencies>
+	</dependencies>
 </project>
