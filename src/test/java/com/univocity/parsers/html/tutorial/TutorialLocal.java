@@ -47,7 +47,7 @@ public class TutorialLocal extends Tutorial {
 		HtmlParser parser = new HtmlParser(entityList);
 
 		// Now we can parse the input HTML file shown above. The FileProvider helps locating files in the classpath.
-		FileProvider input = new FileProvider("documentation/tutorial/html/example_001.html", "UTF-8");
+		FileProvider input = new FileProvider("documentation/tutorial/html/example_001/input.html", "UTF-8");
 
 		// Call the parse method to parse the input and get the results.
 		Results<HtmlParserResult> results = parser.parse(input);
@@ -126,7 +126,7 @@ public class TutorialLocal extends Tutorial {
 
 		// Just create a HTML parser instance for the given entity list.
 		HtmlParser parser = new HtmlParser(entityList);
-		parseAndValidate(parser, "documentation/tutorial/html/example_002.html");
+		parseAndValidate(parser, "documentation/tutorial/html/example_002/input.html");
 	}
 
 	@Test
@@ -137,7 +137,7 @@ public class TutorialLocal extends Tutorial {
 		configureAddressFieldsInGroup(entityList);
 
 		HtmlParser parser = new HtmlParser(entityList);
-		parseAndValidate(parser, "documentation/tutorial/html/example_002.html");
+		parseAndValidate(parser, "documentation/tutorial/html/example_002/input.html");
 	}
 
 	@Test
@@ -149,7 +149,7 @@ public class TutorialLocal extends Tutorial {
 		configureAddressFieldsInGroup(entityList);
 
 		HtmlParser parser = new HtmlParser(entityList);
-		Results<HtmlParserResult> results = parse(parser, "documentation/tutorial/html/example_002.html");
+		Results<HtmlParserResult> results = parse(parser, "documentation/tutorial/html/example_002/input.html");
 
 		//##CODE_START
 		// links rows of address to company based on values of fields with the same name - "company_id" in this example.
@@ -181,7 +181,7 @@ public class TutorialLocal extends Tutorial {
 		configureAddressFieldsInGroup(entityList);
 
 		HtmlParser parser = new HtmlParser(entityList);
-		Results<HtmlParserResult> results = parse(parser, "documentation/tutorial/html/example_002.html");
+		Results<HtmlParserResult> results = parse(parser, "documentation/tutorial/html/example_002/input.html");
 
 		//##CODE_START
 		// Joins rows of company and address based on values of fields with the same name - "company_id" in this example.
@@ -201,7 +201,7 @@ public class TutorialLocal extends Tutorial {
 		configureAddressFieldsInGroup(entityList);
 
 		HtmlParser parser = new HtmlParser(entityList);
-		Results<HtmlParserResult> results = parse(parser, "documentation/tutorial/html/example_002.html");
+		Results<HtmlParserResult> results = parse(parser, "documentation/tutorial/html/example_002/input.html");
 
 		//##CODE_START
 		HtmlParserResult companies = results.get("company");

@@ -17,7 +17,7 @@ public class MatchingRules extends Tutorial {
 	@Test
 	public void matchingRules() {
 		//##CODE_START
-		FileProvider input = new FileProvider("documentation/tutorial/html/matching_rules.html", "UTF-8");
+		FileProvider input = new FileProvider("documentation/tutorial/html/matching_rules/input.html", "UTF-8");
 
 		// Parse an input HTML into a tree structure.
 		HtmlElement root = HtmlParser.parseTree(input);
@@ -35,7 +35,7 @@ public class MatchingRules extends Tutorial {
 	@Test
 	public void matchingRulesWithConstraints() {
 
-		FileProvider input = new FileProvider("documentation/tutorial/html/matching_rules.html", "UTF-8");
+		FileProvider input = new FileProvider("documentation/tutorial/html/matching_rules/input.html", "UTF-8");
 
 		// Parse an input HTML into a tree structure.
 		HtmlElement root = HtmlParser.parseTree(input);
